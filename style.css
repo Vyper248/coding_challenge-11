@@ -1,0 +1,374 @@
+.attribution { 
+    font-size: 11px; text-align: center; 
+    background-color: var(--footerColor);
+    margin: 0px;
+    padding: 5px;
+    width: 100vw;
+    color: white;
+  }
+
+.attribution a { color: white;}
+
+  :root {
+      --textColor: hsl(192, 100%, 9%);
+      --buttonColor: hsl(322, 100%, 66%);
+      --sectionColor: #F6FbFF;
+      --footerColor: hsl(192, 100%, 9%);
+      --pageBorder: 100px;
+  }
+
+  * {
+      box-sizing: border-box;
+  }
+
+  header {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 50px;
+      width: 100%;
+  }
+
+  .logo {
+      width: 250px;
+  }
+
+  h1, h2 {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 700;
+  }
+
+  h1 {
+      font-size: 3em;
+      margin-top: 200px;
+  }
+
+  h2 {
+      font-size: 2.5em;
+      margin-bottom: 30px;
+  }
+
+  h3 {
+      font-size: 1.7em;
+      text-transform: uppercase;
+      margin-top: 0px;
+  }
+
+  body {
+      font-family: 'Open Sans', sans-serif;
+      text-align: center;
+      color: var(--textColor);
+      margin: 0px;
+  }
+
+  .container {
+      max-width: 1440px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin: auto;
+      padding: var(--pageBorder);
+      padding-bottom: 0px;
+  }
+
+  .button {
+      font-weight: 600;
+      border: 1px solid;
+      border-radius: 200px;
+      border-color: var(--buttonColor);
+      color: var(--buttonColor);
+      box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.1);
+      padding: 8px 30px;
+  }
+
+  .button.large {
+      font-weight: 700;
+      background-color: var(--buttonColor);
+      color: white;
+      box-shadow: 0px 4px 20px 1px rgba(0,0,0,0.2);
+      font-size: 1.2em;
+      padding: 25px 100px;
+  }
+
+  .button.form {
+      background-color: var(--buttonColor);
+      color: white;
+      border-radius: 5px;
+      font-weight: 700;
+      width: calc(30%);
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+  }
+
+  .subscribeInput {
+      border-radius: 5px;
+      height: 44px;
+      width: calc(70% - 40px);
+  }
+
+    .subscribeSection {
+        margin-top: 40px;
+        display: flex;
+        min-width: 100%;
+        justify-content: space-between;
+    }
+
+  p.large {
+      max-width: 620px;
+      margin: auto;
+      margin-bottom: 30px;
+      padding: 20px;
+      font-size: 1.2em;
+  }
+
+  #mockup {
+      width: 100%;
+      max-width: 1030px;
+      margin: 120px auto;
+      display: block;
+  }
+
+  .stats {
+      display: flex;
+      justify-content: space-around;
+      text-align: left;
+      margin-bottom: 50px;
+      width: 100%;
+  }
+
+  .stat .value {
+      font-size: 6em;
+      font-weight: 700;
+      margin-top: -10px;
+      margin-bottom: 10px;
+      text-align: center;
+  }
+
+  .stat .label {
+      text-align: center;
+      color: #7D8094;
+      font-size: 1.5em;
+  }
+
+  .bodySection {
+      background-color: var(--sectionColor);
+      width: 100vw;
+      margin-top: -5px;
+      padding: 50px 0px;
+  }
+
+  .sectionOuter {
+      width: 100%;
+      max-width: 1440px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0px var(--pageBorder);
+      margin: auto;
+  }
+
+  .sectionOuter.align-top {
+      align-items: flex-start;
+  }
+
+  .bodySection.reversed {
+      background-color: white;
+  }
+
+  .bodySection.reversed .sectionOuter {
+      flex-direction: row-reverse;
+  }
+
+  .bodySection.footer {
+      background-color: var(--footerColor);
+  }
+
+  .sectionOuter div {
+      width: 50%;
+      max-width: 520px;
+      text-align: left;
+      margin: 10px;
+  }
+
+  .bodyImage img {
+      width: 100%;
+  }
+
+  .footerWave {
+      margin-top: 200px;
+  }
+
+  footer {
+      width: 100vw;
+      padding: 40px 110px;
+      padding-left: calc((100vw - 1440px) / 2);
+      padding-right: calc((100vw - 1440px) / 2);
+      margin-top: -5px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      font-weight: 600;
+      font-size: 0.96em;
+  }
+
+.sectionOuter div.socialMedia {
+    width: 100%;
+}
+
+.socialMedia {
+    margin-top: 70px;
+    font-size: 34px;
+    width: 100%;
+}
+
+.socialMedia i {
+    margin-right: 25px;
+}
+
+.icon {
+  margin-right: 20px;
+}
+
+.small{
+  max-width: 380px;
+}
+
+.left {
+  text-align: left;
+}
+
+img.white {
+  filter: brightness(100);
+}
+
+.waves {
+  width: 100vw;
+}
+
+.mobile {
+    display: none;
+}
+
+@media screen and (max-width: 900px) {
+    :root {
+        --pageBorder: 20px;
+    }
+}
+
+@media screen and (max-width: 680px) {
+    :root {
+        --pageBorder: 40px;
+    }
+
+    body {
+        font-size: 11px;
+    }
+
+    .logo {
+        max-height: 30px;
+        max-width: 170px
+    }
+
+    header {
+        margin: 0px;
+    }
+
+    h1 {
+        margin-top: 150px;
+        margin-bottom: 30px;
+    }
+
+    .button {
+        padding: 5px 30px;
+    }
+
+    .button.large {
+        padding: 15px 50px;
+    }
+
+    .button.form {
+        height: 44px;
+        font-size: 1.1em;
+        margin-top: 15px;
+        padding: 5px 80px;
+    }
+
+    .stats {
+        flex-direction: column;
+        width: 100%;
+        font-size: 1.2em;
+    }
+
+    .stat {
+        max-width: 200px;
+        margin: 50px auto;
+    }
+
+    .sectionOuter {
+        flex-direction: column-reverse;
+    }
+
+    .sectionOuter > div {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 50px;
+    }
+
+    .sectionOuter div p {
+        font-size: 1.5em;
+    }
+
+    footer {
+        line-height: 3em;
+    }
+
+    footer .sectionOuter div:first-child {
+        margin-bottom: 0px;
+    }
+
+    footer .sectionOuter div {
+        text-align: left;
+    }
+
+    footer.bodySection.footer {
+        padding-bottom: 0px;
+    }
+
+    div.socialMedia {
+        margin-bottom: 40px;
+        margin-top: 40px;
+    }
+
+    .bodySection.reversed .sectionOuter {
+      flex-direction: column-reverse;
+    }
+
+    .mobile {
+        display: block;
+    }
+
+    .desktop {
+        display: none;
+    }
+
+    .subscribeSection {
+        flex-direction: column;
+        align-items: flex-end;
+    }
+
+    .subscribeInput {
+        width: 100%;
+    }
+
+    .small {
+        max-width: 1000px;
+    }
+
+    p.large {
+        padding: 0px;
+        margin-bottom: 50px;
+    }
+
+}
