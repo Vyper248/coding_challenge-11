@@ -29,7 +29,7 @@
               --buttonColor: hsl(322, 100%, 66%);
               --sectionColor: #F6FbFF;
               --footerColor: hsl(192, 100%, 9%);
-              --pageBorder: 120px;
+              --pageBorder: 100px;
           }
 
           * {
@@ -39,8 +39,7 @@
           header {
               display: flex;
               justify-content: space-between;
-              padding: 80px;
-              margin-bottom: -50px;
+              margin-bottom: 50px;
               width: 100%;
           }
 
@@ -83,7 +82,8 @@
               justify-content: center;
               align-items: center;
               margin: auto;
-              padding: 0px var(--pageBorder);
+              padding: var(--pageBorder);
+              padding-bottom: 0px;
           }
 
           .button {
@@ -93,11 +93,7 @@
               border-color: var(--buttonColor);
               color: var(--buttonColor);
               box-shadow: 0px 0px 5px 1px rgba(0,0,0,0.1);
-              display: flex;
-              justify-content: center;
-              align-items: center;
-              width: 140px;
-              height: 44px;
+              padding: 8px 30px;
           }
 
           .button.large {
@@ -106,12 +102,7 @@
               color: white;
               box-shadow: 0px 4px 20px 1px rgba(0,0,0,0.2);
               font-size: 1.2em;
-              display: flex;
-              justify-content: center;
-              align-items: center;
-              margin: auto;
-              width: 400px;
-              height: 80px;
+              padding: 25px 100px;
           }
 
           .button.form {
@@ -121,19 +112,27 @@
               font-weight: 700;
               width: calc(30%);
               display: inline-flex;
-              margin-left: 40px;
+              align-items: center;
+              justify-content: center;
           }
 
           .subscribeInput {
               border-radius: 5px;
               height: 44px;
               width: calc(70% - 40px);
-              margin-top: 30px;
           }
 
+            .subscribeSection {
+                margin-top: 40px;
+                display: flex;
+                min-width: 100%;
+                justify-content: space-between;
+            }
+
           p.large {
-              width: 620px;
-              margin: 30px auto;
+              max-width: 620px;
+              margin: auto;
+              margin-bottom: 30px;
               padding: 20px;
               font-size: 1.2em;
           }
@@ -204,6 +203,7 @@
               width: 50%;
               max-width: 520px;
               text-align: left;
+              margin: 10px;
           }
 
           .bodyImage img {
@@ -227,12 +227,17 @@
               font-weight: 600;
               font-size: 0.96em;
           }
-        
+
+        .sectionOuter div.socialMedia {
+            width: 100%;
+        }
+
         .socialMedia {
             margin-top: 70px;
             font-size: 34px;
+            width: 100%;
         }
-        
+
         .socialMedia i {
             margin-right: 25px;
         }
@@ -253,14 +258,134 @@
           filter: brightness(100);
         }
 
-        .desktopWaves {
+        .waves {
           width: 100vw;
         }
 
-        @media screen and (max-width: 375px) {
+        .mobile {
+            display: none;
+        }
+        
+        @media screen and (max-width: 900px) {
+            :root {
+                --pageBorder: 20px;
+            }
+        }
+
+        @media screen and (max-width: 680px) {
+            :root {
+                --pageBorder: 40px;
+            }
+            
+            body {
+                font-size: 11px;
+            }
+            
+            .logo {
+                max-height: 30px;
+                max-width: 170px
+            }
+            
+            header {
+                margin: 0px;
+            }
+            
             h1 {
+                margin-top: 150px;
+                margin-bottom: 30px;
+            }
+            
+            .button {
+                padding: 5px 30px;
+            }
+            
+            .button.large {
+                padding: 15px 50px;
+            }
+            
+            .button.form {
+                height: 44px;
+                font-size: 1.1em;
+                margin-top: 15px;
+                padding: 5px 80px;
+            }
+            
+            .stats {
+                flex-direction: column;
+                width: 100%;
+                font-size: 1.2em;
+            }
+            
+            .stat {
+                max-width: 200px;
+                margin: 50px auto;
+            }
+            
+            .sectionOuter {
+                flex-direction: column-reverse;
+            }
+            
+            .sectionOuter > div {
+                width: 100%;
+                text-align: center;
+                margin-bottom: 50px;
+            }
+            
+            .sectionOuter div p {
                 font-size: 1.5em;
             }
+            
+            footer {
+                line-height: 3em;
+            }
+            
+            footer .sectionOuter div:first-child {
+                margin-bottom: 0px;
+            }
+            
+            footer .sectionOuter div {
+                text-align: left;
+            }
+            
+            footer.bodySection.footer {
+                padding-bottom: 0px;
+            }
+            
+            div.socialMedia {
+                margin-bottom: 40px;
+                margin-top: 40px;
+            }
+            
+            .bodySection.reversed .sectionOuter {
+              flex-direction: column-reverse;
+            }
+            
+            .mobile {
+                display: block;
+            }
+            
+            .desktop {
+                display: none;
+            }
+            
+            .subscribeSection {
+                flex-direction: column;
+                align-items: flex-end;
+            }
+            
+            .subscribeInput {
+                width: 100%;
+            }
+            
+            .small {
+                max-width: 1000px;
+            }
+            
+            p.large {
+                padding: 0px;
+                margin-bottom: 50px;
+            }
+
         }
     </style>
 </head>
@@ -311,7 +436,8 @@
 
         </div>
         
-        <img class="desktopWaves" src="images/bg-section-top-desktop-1.svg">
+        <img class="waves desktop" src="images/bg-section-top-desktop-1.svg">
+        <img class="waves mobile" src="images/bg-section-top-mobile-1.svg">
         
         <div class="bodySection">
             <div class="sectionOuter">
@@ -327,7 +453,8 @@
             </div>
         </div>
         
-        <img class="desktopWaves" src="images/bg-section-bottom-desktop-1.svg">
+        <img class="waves desktop" src="images/bg-section-bottom-desktop-1.svg">
+        <img class="waves mobile" src="images/bg-section-bottom-mobile-1.svg">
         
         <div class="bodySection reversed">
             <div class="sectionOuter">
@@ -343,7 +470,8 @@
             </div>
         </div>
         
-        <img class="desktopWaves" src="images/bg-section-top-desktop-2.svg">
+        <img class="waves desktop" src="images/bg-section-top-desktop-2.svg">
+        <img class="waves mobile" src="images/bg-section-top-mobile-2.svg">
         
         <div class="bodySection">
             <div class="sectionOuter">
@@ -358,13 +486,15 @@
             </div>
         </div>
         
-        <img class="desktopWaves" src="images/bg-section-bottom-desktop-2.svg">
+        <img class="waves desktop" src="images/bg-section-bottom-desktop-2.svg">
+        <img class="waves mobile" src="images/bg-section-bottom-mobile-2.svg">
 
 
         <h1>Ready To Build Your Community?</h1>
         <a class="button large">Get Started For Free</a>
         
-        <img class="desktopWaves footerWave" src="images/bg-footer-top-desktop.svg">
+        <img class="waves desktop footerWave" src="images/bg-footer-top-desktop.svg">
+        <img class="waves mobile footerWave" src="images/bg-footer-top-mobile.svg">
         
         <footer class="bodySection footer">
             <div class="sectionOuter align-top">
@@ -388,8 +518,11 @@
                     <h3>Newsletter</h3>
                     
                     <p class="small left">To recieve tips on how to grow your community, sign up to our weekly newsletter. We’ll never send you spam or pass on your email address</p>
-
-                    <input class="subscribeInput" type="text" name="email"><a class="button form">Subscribe</a>
+                    
+                    <div class="subscribeSection">
+                        <input class="subscribeInput" type="text" name="email">
+                        <a class="button form">Subscribe</a>
+                    </div>
                 </div>
             </div>
         </footer>
